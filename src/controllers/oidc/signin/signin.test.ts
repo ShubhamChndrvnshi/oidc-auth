@@ -32,7 +32,7 @@ describe('Sign In', () => {
         CLIENT_ID = res.body.client_id;
         CLIENT_SECRET = res.body.client_secret;
 
-        const account = await AccountService.signup(accountEmail, accountSecret, true, true, true);
+        const account = await AccountService.signup('', '', accountEmail, accountSecret, true, true, true);
         account.privateKey = undefined;
 
         await account.save();
