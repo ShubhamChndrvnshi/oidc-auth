@@ -1,0 +1,14 @@
+node_modules
+.env*
+!.env.ci
+!.env.example
+src/jwks.json
+dist
+cache
+ci-cache
+logs
+coverage
+.DS_Store
+.vscode
+
+certs/*

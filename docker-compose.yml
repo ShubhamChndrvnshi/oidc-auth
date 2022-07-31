@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+    auth_mongo:
+        container_name: thx_auth_mongo
+        image: mongo
+        restart: always
+        ports:
+            - 27019:27017
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: root
+            MONGO_INITDB_DATABASE: admin
+        volumes:
+            - mongo-data:/data/db
+            - ./fixture/db:/docker-entrypoint-initdb.d/fixture
+            - ./scripts/mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh
+
+volumes:
+    mongo-data:
