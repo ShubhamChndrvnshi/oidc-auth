@@ -14,6 +14,6 @@ MONGODB_PASSWORD=root
 MONGODB_NAME=auth
 echo $MONGO_INITDB_ROOT_USERNAME
 echo $PWD
-mongoimport --uri="mongodb://$MONGO_INITDB_ROOT_USERNAME:$MONGO_INITDB_ROOT_PASSWORD@localhost:27017/auth?authSource=admin&ssl=false" --file="$PWD/fixture/db/client.json" --jsonArray;
-mongoimport --uri="mongodb://$MONGO_INITDB_ROOT_USERNAME:$MONGO_INITDB_ROOT_PASSWORD@localhost:27017/auth?authSource=admin&ssl=false" --file="$PWD/fixture/db/accounts.json" --jsonArray;
-mongoimport --uri="mongodb://$MONGO_INITDB_ROOT_USERNAME:$MONGO_INITDB_ROOT_PASSWORD@localhost:27017/auth?authSource=admin&ssl=false" --file="$PWD/fixture/db/registration_access_token.json"  --jsonArray;
+mongoimport --uri="mongodb://localhost:27017/auth" --file="$PWD/fixture/db/client.json" --jsonArray;
+mongoimport --uri="mongodb://localhost:27017/auth" --file="$PWD/fixture/db/accounts.json" --jsonArray;
+mongoimport --uri="mongodb://localhost:27017/auth" --file="$PWD/fixture/db/registration_access_token.json"  --jsonArray;

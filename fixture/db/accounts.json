@@ -1,16 +1,37 @@
-[
-    {
-        "_id": { "$oid": "60a38b36bf804b033c5e3faa" },
-        "active": true,
-        "email": "peter@thx.network",
-        "password": "$2a$10$7cKl7EXKbMLtRfd7T/ETMeQGASIPpkmWfqbsXbFVlCElnITbRsKmy",
-        "acceptTermsPrivacy": true,
-        "acceptUpdates": true,
-        "signupToken": "",
-        "signupTokenExpires": null,
-        "plan": 1,
-        "createdAt": { "$date": "2021-05-18T09:39:03.446Z" },
-        "updatedAt": { "$date": "2021-05-18T09:39:23.128Z" },
-        "__v": 0
+[{
+    "_id": {
+      "$oid": "62ebdde1588b24fb4642182e"
+    },
+    "active": true,
+    "email": "shubham@smartchain.me",
+    "password": "$2a$10$2q8WKwQ1yN/b6o44fpC8x..L3zEwFVuMYu3Q.3Z0aEWZMOd1rKOqa",
+    "firstName": "shubham",
+    "lastName": "kumar",
+    "name": "shubham kumar",
+    "acceptTermsPrivacy": true,
+    "acceptUpdates": true,
+    "plan": 0,
+    "privateKey": "appear spike fabric harvest nation father idle one tuition valley spin wagon",
+    "signupToken": "e989ec5b9c741b172851189e02f1be2d",
+    "signupTokenExpires": {
+      "$date": {
+        "$numberLong": "1659711342961"
+      }
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1659624933909"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1660208420159"
+      }
+    },
+    "__v": 0,
+    "lastLoginAt": {
+      "$date": {
+        "$numberLong": "1660208420156"
+      }
     }
-]
+  }]
