@@ -3,6 +3,7 @@ import { AccountPlanType } from './enums/AccountPlanType';
 export interface TAccount {
     firstName: string;
     lastName: string;
+    name: string;
     plan: AccountPlanType;
     organisation: string;
     active: boolean;

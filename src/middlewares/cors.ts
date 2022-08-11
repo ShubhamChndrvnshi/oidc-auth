@@ -7,6 +7,8 @@ export const corsHandler = cors(async (req: any, callback: any) => {
     const allowedOrigins = [
         'https://localhost:3000',
         'http://localhost:4200',
+        'https://localhost:4000',
+        'https://labs-code.pages.dev',
         AUTH_URL,
         WALLET_URL,
         DASHBOARD_URL,

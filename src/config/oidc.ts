@@ -35,14 +35,13 @@ const config: Configuration = {
         });
 
         grant.addOIDCScope('openid offline_access');
-        grant.addOIDCClaims(['sub', 'email']);
+        grant.addOIDCClaims(['sub', 'email', 'name']);
         grant.addResourceScope(API_URL, ctx.oidc.client.scope);
         await grant.save();
         return grant;
     },
     async findAccount(ctx: any, sub: string) {
         const account: AccountDocument = await Account.findById(sub);
-
         return {
             accountId: sub,
             claims: () => {
@@ -108,7 +107,7 @@ const config: Configuration = {
         'brands:write',
     ],
     claims: {
-        openid: ['sub', 'email'],
+        openid: ['sub', 'email', 'name'],
     },
     ttl: {
         Interaction: 1 * 60 * 60, // 1 hour in seconds,

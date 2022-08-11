@@ -10,6 +10,7 @@
     "scripts": {
         "lint": "npx eslint \"src/**/*.ts\"",
         "lint:fix": "npx eslint \"src/**/*.ts\" --fix",
+        "build:start:server": "tsc; node dist/src/server.js",
         "dev": "docker-compose up -d && npm run watch:debug",
         "start": "export NODE_TLS_REJECT_UNAUTHORIZED='0'; npm run watch:node",
         "build": "npm run build:sass && npm run build:assets && tsc",
@@ -36,6 +37,7 @@
         "axios": "^0.21.3",
         "axios-better-stacktrace": "^2.1.2",
         "bcrypt-nodejs": "^0.0.3",
+        "bip39": "^3.0.4",
         "bluebird": "^3.5.5",
         "compression": "^1.7.4",
         "cors": "^2.8.5",

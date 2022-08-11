@@ -28,6 +28,7 @@ const accountSchema = new mongoose.Schema(
         active: Boolean,
         firstName: String,
         lastName: String,
+        name: String,
         organisation: String,
         plan: Number,
         email: { type: String, unique: true },
@@ -67,9 +68,9 @@ accountSchema.pre('save', function save(next) {
         return next();
     }
 
-    if (account.privateKey) {
-        account.privateKey = encryptString(account.privateKey, account.password);
-    }
+    // if (account.privateKey) {
+    //     account.privateKey = encryptString(account.privateKey, account.password);
+    // }
 
     const hash = bcrypt.hashSync(account.password);
     account.password = hash;

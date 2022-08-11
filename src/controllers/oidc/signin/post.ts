@@ -56,9 +56,9 @@ async function controller(req: Request, res: Response) {
     }
 
     // Make sure to ask for a login link from the authority if custodial key is found
-    if (account.privateKey) {
-        return renderLogin(ERROR_AUTH_LINK);
-    }
+    // if (account.privateKey) {
+    //     return renderLogin(ERROR_AUTH_LINK);
+    // }
 
     // Actions after successfully login
     await AccountService.update(account, {

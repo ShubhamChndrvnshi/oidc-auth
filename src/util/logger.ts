@@ -30,7 +30,8 @@ const formatMorgan = json({
 
 export const requestLogger = morgan(formatMorgan, {
     skip: (req: Request) => {
-        req.body ? console.log(req.body) : {};
+        // if (req.url == '/token') console.log('interaction', req);
+        // req.body ? console.log('body', req.body) : {};
         return req.baseUrl && req.baseUrl.startsWith(`/${VERSION}/ping`);
     },
     stream: { write: (message: string) => logger.http(JSON.parse(message)) },

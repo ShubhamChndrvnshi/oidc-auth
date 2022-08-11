@@ -132,6 +132,7 @@
                         </svg>
                     </div>
                 </div>
+                <input type="hidden" name="returnUrl" value="<%= params.return_url %>" />
                 <% if (locals.alert && alert.message) { %>
                     <div class="alert alert-<%= alert.variant %>">
                         <%- alert.message %>

@@ -35,7 +35,12 @@ export class MailService {
             { async: true },
         );
 
-        await this.sendMail(account.email, 'Please complete the sign up for your THX Account', html, verifyUrl);
+        await this.sendMail(
+            account.email,
+            'Please complete the sign up for your Smartchain Labs Account',
+            html,
+            verifyUrl,
+        );
 
         await account.save();
     }
@@ -79,7 +84,7 @@ export class MailService {
             { async: true },
         );
 
-        await this.sendMail(account.email, 'Reset your THX Password', html, resetUrl);
+        await this.sendMail(account.email, 'Reset your smartchain labs Password', html, resetUrl);
 
         await account.save();
     }

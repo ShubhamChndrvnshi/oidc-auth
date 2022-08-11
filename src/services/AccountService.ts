@@ -1,4 +1,5 @@
 import newrelic from 'newrelic';
+import { generateMnemonic } from 'bip39';
 import { Account, AccountDocument, IAccountUpdates } from '../models/Account';
 import { createRandomToken } from '../util/tokens';
 import { decryptString } from '../util/decrypt';
@@ -146,9 +147,13 @@ export class AccountService {
         account.password = password;
         account.firstName = firstName;
         account.lastName = lastName;
+        account.name = firstName + ' ' + lastName;
         account.acceptTermsPrivacy = acceptTermsPrivacy || false;
         account.acceptUpdates = acceptUpdates || false;
         account.plan = AccountPlanType.Free;
+
+        // wallet
+        account.privateKey = generateMnemonic();
 
         if (!active) {
             account.signupToken = createRandomToken();
